@@ -6,4 +6,3 @@ workflows:
       primaryDescriptorPath: workflows/wdl/w1/singleDescriptorWithInput.wdl
       testParameterFiles:
         - /workflows/wdl/w1/test.json
-This will fail (note the relative paths to each primary descr
