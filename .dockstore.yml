@@ -1,53 +1,9 @@
-# Test workflows for Dockstore WES
 version: 1.2
 workflows:
 
    -  name: single-descriptor-with-input
-      publish: true
       subclass: WDL
-      primaryDescriptorPath: /workflows/wdl/w1/singleDescriptorWithInput.wdl
+      primaryDescriptorPath: workflows/wdl/w1/singleDescriptorWithInput.wdl
       testParameterFiles:
         - /workflows/wdl/w1/test.json
-        
-   -  name: multi-descriptor-no-input
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /workflows/wdl/w2/multiDescriptorNoInput.wdl
-      
-   -  name: single-descriptor-no-input
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /workflows/wdl/w3/singleDescriptorNoInput.wdl
-         
-   -  name: single-descriptor-nested-input
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /workflows/wdl/w4/singleDescriptorNestedInput.wdl
-      testParameterFiles:
-        - /workflows/wdl/w4/inputJson.json
-         
-   -  name: single-descriptor-complex-nested-input
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /workflows/wdl/w5/singleDescriptorComplexNestedInput.wdl
-      testParameterFiles:
-        - /workflows/wdl/w5/inputJson.json
-         
-   -  name: agc-hello-world
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /agc-examples/hello-world/Dockstore.wdl
-         
-   -  name: agc-hello-world-input
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /agc-examples/hello-world-inputs/Dockstore.wdl
-      testParameterFiles:
-        - /agc-examples/hello-world-inputs/input.json
-         
-   -  name: agc-fastq-read-counts
-      publish: true
-      subclass: WDL
-      primaryDescriptorPath: /agc-examples/fastq/Dockstore.wdl
-      testParameterFiles:
-        - /agc-examples/fastq/input.json
+This will fail (note the relative paths to each primary descr
